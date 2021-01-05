@@ -12,23 +12,31 @@
         :opacity="0.30"
       >
         <h1 class="text-center">Marino</h1>
-        <p class="text-center">Programmer</p>
+        <p class="text-center">My Skills</p>
       </v-overlay>
     </v-img>
 
     <div class="bottom-spacing"></div>
 
-    <v-btn
-      block
-      elevation="2"
-      dark
-      to="/skills"
+    <v-progress-linear
+      :value="javascript"
+      color="amber"
+      height="25"
+      class="rounded-xl"
     >
-      <v-icon left>
-        mdi-star
-      </v-icon>
-      My Skills
-    </v-btn>
+      <strong>JavaScript - {{ Math.ceil(javascript) }}%</strong>
+    </v-progress-linear>
+
+    <div class="bottom-spacing"></div>
+
+    <v-progress-linear
+      :value="typescript"
+      color="indigo"
+      height="25"
+      class="rounded-xl"
+    >
+      <strong>TypeScript - {{ Math.ceil(typescript) }}%</strong>
+    </v-progress-linear>
   </div>
 </template>
 
@@ -47,8 +55,10 @@ export default {
   data(){
     return {
       head: {
-        title: "Home"
-      }
+        title: "Skills"
+      },
+      javascript: 78,
+      typescript: 43
     }
   }
 }

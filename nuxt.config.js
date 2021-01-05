@@ -23,11 +23,6 @@ export default {
     "assets/styles/transition.css"
   ],
 
-  loading: {
-    color: "blue",
-    height: "5px"
-  },
-
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
   ],
@@ -44,7 +39,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -67,6 +62,10 @@ export default {
         }
       }
     }
+  },
+
+  loading: {
+    color: "#fff"
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
