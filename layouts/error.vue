@@ -1,5 +1,29 @@
 <template>
   <v-app dark>
+    <v-row>
+      <v-col>
+        <v-btn
+          outlined
+          color="white"
+          block
+          @click="goBack"
+        >
+          Go back
+        </v-btn>
+      </v-col>
+
+      <v-col>
+        <v-btn
+          outlined
+          color="white"
+          block
+          to="/"
+        >
+          Home
+        </v-btn>
+      </v-col>
+    </v-row>
+
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
@@ -24,7 +48,12 @@ export default {
   data () {
     return {
       pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      otherError: 'An error occurred',
+    }
+  },
+  methods: {
+    goBack(){
+      window.history.back();
     }
   },
   head () {
@@ -36,9 +65,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-h1 {
-  font-size: 20px;
-}
-</style>

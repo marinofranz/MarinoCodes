@@ -18,25 +18,22 @@
 
     <div class="bottom-spacing"></div>
 
-    <v-progress-linear
-      :value="javascript"
-      color="amber"
-      height="25"
-      class="rounded-xl"
-    >
-      <strong>JavaScript - {{ Math.ceil(javascript) }}%</strong>
-    </v-progress-linear>
+    <v-divider></v-divider>
 
     <div class="bottom-spacing"></div>
 
     <v-progress-linear
-      :value="typescript"
-      color="indigo"
-      height="25"
-      class="rounded-xl"
+      v-for="skill in skills"
+      :key="skill"
+      :value="skill.value"
+      :color="skill.color"
+      height="35"
+      class="rounded-xl bottom-spacing"
     >
-      <strong>TypeScript - {{ Math.ceil(typescript) }}%</strong>
+      <strong>{{ skill.name }} - {{ Math.ceil(skill.value) }}%</strong>
     </v-progress-linear>
+
+    <v-divider></v-divider>
   </div>
 </template>
 
@@ -54,11 +51,78 @@
 export default {
   data(){
     return {
-      head: {
-        title: "Skills"
-      },
-      javascript: 78,
-      typescript: 43
+      skills: [
+        {
+          name: "HTML",
+          value: 90,
+          color: "red"
+        },
+        {
+          name: "JavaScript",
+          value: 78,
+          color: "amber"
+        },
+        {
+          name: "Node.js",
+          value: 75,
+          color: "green"
+        },
+        {
+          name: "React",
+          value: 74,
+          color: "#039BE5"
+        },
+        {
+          name: "CSS",
+          color: "light-blue",
+          value: 72
+        },
+        {
+          name: "Sass",
+          color: "pink",
+          value: 70
+        },
+        {
+          name: "Vue.js",
+          color: "#039BE5",
+          value: 65
+        },
+        {
+          name: "Nuxt.js",
+          color: "#2E7D32",
+          value: 62
+        },
+        {
+          name: "TypeScript",
+          value: 62,
+          color: "indigo"
+        },
+        {
+          name: "Bootstrap",
+          value: 50,
+          color: "deep-purple"
+        },
+        {
+          name: "PHP",
+          value: 26,
+          color: "blue"
+        },
+        {
+          name: "Python",
+          value: 12,
+          color: "#283593"
+        },
+        {
+          name: "Java",
+          value: 8,
+          color: "orange"
+        }
+      ]
+    }
+  },
+  head(){
+    return {
+      title: "Skills"
     }
   }
 }

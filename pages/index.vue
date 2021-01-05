@@ -18,17 +18,49 @@
 
     <div class="bottom-spacing"></div>
 
-    <v-btn
-      block
-      elevation="2"
-      dark
-      to="/skills"
-    >
-      <v-icon left>
-        mdi-star
-      </v-icon>
-      My Skills
-    </v-btn>
+    <v-row>
+      <v-col>
+        <v-btn
+          block
+          elevation="2"
+          dark
+          to="/skills"
+        >
+          <v-icon left>
+            mdi-star
+          </v-icon>
+          Skills
+        </v-btn>
+      </v-col>
+
+      <v-col>
+        <v-btn
+          block
+          elevation="2"
+          dark
+          to="/experience"
+        >
+          <v-icon left>
+            mdi-briefcase
+          </v-icon>
+          Experience
+        </v-btn>
+      </v-col>
+
+      <v-col>
+        <v-btn
+          block
+          elevation="2"
+          dark
+          to="/social"
+        >
+          <v-icon left>
+            mdi-share
+          </v-icon>
+          Social Media
+        </v-btn>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -46,9 +78,12 @@
 export default {
   data(){
     return {
-      head: {
-        title: "Home"
-      }
+
+    }
+  },
+  head(){
+    return {
+      title: "Home"
     }
   }
 }
