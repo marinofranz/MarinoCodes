@@ -14,8 +14,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script:  |
-            cd /home/marino/MarinoCodes
+            cd ~
             git pull
-            yarn
-            yarn build
+            npm install
+            npm run build
             pm2 reload MarinoWebsite
