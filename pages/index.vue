@@ -8,6 +8,22 @@
       This website is still under development, please report bugs to Marino over on his <strong class="cursor-pointer" @click.stop="dialog = true">Discord</strong>
     </v-alert>
 
+    <v-img
+      src="/MGlow.png"
+      max-height="275"
+      max-width="1400"
+      class="rounded-lg"
+    >
+      <v-overlay
+        :absolute="true"
+        :value="true"
+        :opacity="0.30"
+      >
+        <h1 class="text-center">Marino</h1>
+        <p class="text-center">Programmer</p>
+      </v-overlay>
+    </v-img>
+
     <v-dialog
     v-model="dialog"
     max-width="290"
