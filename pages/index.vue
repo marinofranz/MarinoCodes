@@ -3,7 +3,7 @@
     <v-img
       src="/MGlow.png"
       max-height="275"
-      max-width="1400"
+      max-width="100000000"
       class="rounded-lg"
     >
       <v-overlay
@@ -58,6 +58,20 @@
             mdi-share
           </v-icon>
           Social Media
+        </v-btn>
+      </v-col>
+
+      <v-col>
+        <v-btn
+          block
+          elevation="2"
+          dark
+          to="/blog"
+        >
+          <v-icon left>
+            mdi-newspaper
+          </v-icon>
+          Blog
         </v-btn>
       </v-col>
     </v-row>

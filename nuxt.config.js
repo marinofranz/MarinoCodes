@@ -23,8 +23,8 @@ export default {
     "assets/styles/transition.css"
   ],
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    "~/plugins/index.js"
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -39,7 +39,8 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    "@nuxt/content"
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -65,6 +66,15 @@ export default {
 
   loading: {
     color: "#fff"
+  },
+
+  content: {
+    liveEdit: false,
+    markdown: {
+      prism: {
+        theme: "prism-themes/themes/prism-material-oceanic.css"
+      }
+    }
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

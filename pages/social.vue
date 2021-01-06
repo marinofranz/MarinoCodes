@@ -3,7 +3,7 @@
     <v-img
       src="/MGlow.png"
       max-height="275"
-      max-width="1400"
+      max-width="100000000"
       class="rounded-lg"
     >
       <v-overlay
