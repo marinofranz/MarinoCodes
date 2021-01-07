@@ -1,5 +1,12 @@
 <template>
   <v-app dark>
+    <h2>We couldn't find that page!<br>
+    Here's what you can do:</h2>
+
+    <br>
+    <v-divider></v-divider>
+    <br>
+
     <v-row>
       <v-col>
         <v-btn
