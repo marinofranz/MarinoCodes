@@ -19,6 +19,8 @@
     <br>
     <v-divider></v-divider>
     <br>
+    
+    {{ articles }}
 
     <div>
       <v-card
