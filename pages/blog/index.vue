@@ -19,8 +19,6 @@
     <br>
     <v-divider></v-divider>
     <br>
-    
-    {{ articles }}
 
     <div>
       <v-card
@@ -48,7 +46,7 @@
 <script>
 export default {
   async asyncData({ $content, params }){
-    const articles = await $content(params.slug)
+    const articles = await $content();
       .sortBy("createdAt", "asc")
       .fetch();
 
